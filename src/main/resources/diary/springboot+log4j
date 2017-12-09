@@ -1,0 +1,3 @@
+1.移除springboot默认的logback依赖
+2.增加log4j依赖
+3.增加logj.properties配置文件,进行相关配置

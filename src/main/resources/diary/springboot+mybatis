@@ -1,0 +1,4 @@
+1.在application.properties中配置数据源:driver,url,username,password
+2.在Application中配置mapeer的包扫描路径:@MapperScan(basePackages = "helloWorld.mapper")
+3.在application.properties中配置mapper.xml的包扫描路径mybatis.mapperLocations=classpath:mappers/*.xml
+4.在application.properties中配置bean的包扫描路径mybatis.typeAliasesPackage=helloWorld.bean

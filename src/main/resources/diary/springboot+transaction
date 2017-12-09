@@ -1,0 +1,2 @@
+1.启动类添加@EnableTransactionManagement注解:开启事务
+2.在具体service实现类中添加@Transactional注解;如果你加在类上，那该类所有的方法都会被事务管理，如果你加在方法上，那仅仅该方法符合具体的事务。
