@@ -34,7 +34,7 @@ public class TestController {
 	@ResponseBody
 	public String test() {
 		System.out.println("test---------------------------------------------------------------------------------");
-		return "222test";
+		return "test";
 	}
 	
 	/**
