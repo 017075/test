@@ -1,0 +1,3 @@
+1.从git上pull下来项目,如果java文件右下角有红色的 j 标志,表示项目无法编译: file-->project structure-->Modules-->source-->点击右侧的第一个叉号(X)-->点击加号选择项目目录
+2.为项目添加jdk:file-->project structure-->project-->project sdk-->添加jdk目录即可
+3.如果java文件中jar包提示报错:MavenProject-->Dependencies-->查看哪一个jar包报错-->打开http://mvnrepository.com网址-->在搜框中搜索该jar包,选择低版本,将pom.xml中version属性替换
