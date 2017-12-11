@@ -1,0 +1,2 @@
+1.使用eclipse从git上pull项目,当进行到最后一步时,如果提示: no project found,这是因为eclipse的所有项目都需要.project文件跟.classpath文件,
+  可以在任意项目中拷贝这两个文件到项目根目录下即可,.classpath文件不需要改动,.project文件将<name>projectName</name>中的projectName修改为自己项目名称即可
