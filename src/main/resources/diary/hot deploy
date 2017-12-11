@@ -1,0 +1,4 @@
+1.hot deploy:热部署
+2.热部署的实质就是;当你修改了某个项目文件时,开发工具会将这个文件再次编译
+3.eclipse:Project-->Build Automatically(eclipse修改完文件需要手动保存,保存之后自动编译)
+4.idea:ctrl+shift+f9(idea修改完文件会自动保存,不过需要手动编译)
