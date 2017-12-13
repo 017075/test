@@ -13,8 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/test")
@@ -82,5 +84,19 @@ public class TestController {
 		return "mybatis连接mysql失败";
  
 	}
-	
+	@RequestMapping("/helloo")
+	public String hello(){
+		/*map.put("name", "[Angel -- 守护天使]");*/
+		return "testPage";
+	}
+
+	@RequestMapping("/hello")
+	public ModelAndView hello(Model model){
+		ModelAndView modelAndView = new ModelAndView("tt");
+
+		String hello = "Hello world";
+		model.addAttribute("hello", hello);
+
+		return modelAndView;
+	}
 }

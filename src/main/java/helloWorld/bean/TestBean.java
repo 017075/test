@@ -4,6 +4,8 @@ public class TestBean {
 	private String name;
 	private Integer age;
 	private Integer sex;
+	private int pageSize;
+	private int currentPage;
 	public String getName() {
 		return name;
 	}
@@ -23,5 +25,11 @@ public class TestBean {
 		this.sex = sex;
 	}
 
+	public int getPageSize() {
+		return pageSize;
+	}
 
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
 }
