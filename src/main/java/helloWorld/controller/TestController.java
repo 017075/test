@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/test")
 public class TestController {
 	
 	@Autowired
@@ -32,7 +31,7 @@ public class TestController {
 	 * 第一个请求测试   http://localhost:8888/test/test
 	 * @return
 	 */
-	@RequestMapping("/test")
+	@RequestMapping("/test1")
 	@ResponseBody
 	public String test() {
 		System.out.println("test---------------------------------------------------------------------------------");
@@ -86,16 +85,16 @@ public class TestController {
 	}
 	@RequestMapping("/helloo")
 	public String hello(){
-		/*map.put("name", "[Angel -- 守护天使]");*/
-		return "testPage";
+		System.out.println("aaa");
+		return "test";
 	}
 
 	@RequestMapping("/hello")
 	public ModelAndView hello(Model model){
-		ModelAndView modelAndView = new ModelAndView("tt");
-
-		String hello = "Hello world";
-		model.addAttribute("hello", hello);
+		ModelAndView modelAndView = new ModelAndView("tt.jsp");
+//
+//		String hello = "Hello world";
+//		model.addAttribute("hello", hello);
 
 		return modelAndView;
 	}
