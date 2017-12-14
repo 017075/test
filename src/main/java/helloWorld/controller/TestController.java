@@ -91,11 +91,8 @@ public class TestController {
 
 	@RequestMapping("/hello")
 	public ModelAndView hello(Model model){
-		ModelAndView modelAndView = new ModelAndView("tt.jsp");
-//
-//		String hello = "Hello world";
-//		model.addAttribute("hello", hello);
-
+		ModelAndView modelAndView = new ModelAndView("tt");
+		modelAndView.addObject("hello","欢迎大佬视察,快给大佬递茶");
 		return modelAndView;
 	}
 }
