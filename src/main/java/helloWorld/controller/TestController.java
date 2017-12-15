@@ -95,4 +95,10 @@ public class TestController {
 		modelAndView.addObject("hello","欢迎大佬视察,快给大佬递茶2");
 		return modelAndView;
 	}
+
+	@RequestMapping("/testPage")
+	public  ModelAndView testPage(){
+		ModelAndView modelAndView = new ModelAndView("testPage");
+		return  modelAndView;
+	}
 }
