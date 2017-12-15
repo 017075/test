@@ -92,7 +92,7 @@ public class TestController {
 	@RequestMapping("/hello")
 	public ModelAndView hello(Model model){
 		ModelAndView modelAndView = new ModelAndView("tt");
-		modelAndView.addObject("hello","欢迎大佬视察,快给大佬递茶");
+		modelAndView.addObject("hello","欢迎大佬视察,快给大佬递茶2");
 		return modelAndView;
 	}
 }
