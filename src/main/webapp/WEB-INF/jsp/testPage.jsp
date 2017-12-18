@@ -44,12 +44,4 @@
         totalCount: '共' + $("#totalCount").val() + '条数据', // 条目总数
         slideSpeed: 600, // 缓动速度。单位毫秒
     })
-   /* $("#jumpBtn").click(function () {
-       $("#currentPage").val($("#jumpText").val());
-        $("#dataListForm").submit();
-    });*/
-    $("#prePage").click(function () {
-        $("#currentPage").val($("#jumpText").val());
-        $("#dataListForm").submit();
-    });
 </script>
