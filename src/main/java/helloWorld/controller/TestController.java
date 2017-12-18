@@ -1,6 +1,7 @@
 package helloWorld.controller;
 
 import helloWorld.bean.TestBean;
+import helloWorld.mapper.TestMapper;
 import helloWorld.service.TestService;
 
 import java.util.Iterator;
@@ -9,6 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import helloWorld.util.Pagination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,6 +27,8 @@ public class TestController {
 	private JdbcTemplate jdbcTemplate;
 	@Autowired
 	private TestService testService;
+	@Autowired
+	private TestMapper testMapper;
 	
 	
 	/**
@@ -97,8 +101,14 @@ public class TestController {
 	}
 
 	@RequestMapping("/testPage")
-	public  ModelAndView testPage(){
+	public  ModelAndView testPage(TestBean bean,Pagination page){
 		ModelAndView modelAndView = new ModelAndView("testPage");
+		List<TestBean> beans = testMapper.getTestUser();
+		page.setPageSize(6);
+		page.setTotalCount(beans.size());
+		modelAndView.addObject("page",page);
+		beans = page.getCurrentPageList(beans);
+		modelAndView.addObject("beans",beans);
 		return  modelAndView;
 	}
 }

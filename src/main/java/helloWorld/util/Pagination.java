@@ -1,6 +1,8 @@
 package helloWorld.util;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pagination<T> implements Serializable{
     public static final int DEFAULT_PAGE_SIZE = 10;
@@ -11,8 +13,9 @@ public class Pagination<T> implements Serializable{
     private int currentPage;
     private int totalPage;
     private int totalCount;
+    private List<T> currentPageList;
     public Pagination() {
-        this.currentPage = 1;
+         this.currentPage = this.currentPage>1?this.currentPage:1;
         this.pageSize = DEFAULT_PAGE_SIZE;
     }
 
@@ -106,4 +109,21 @@ public class Pagination<T> implements Serializable{
         }
     }
 
+    public List<T> getCurrentPageList(List<T> list) {
+        List<T> currentPageList = new ArrayList<>();
+        if(this.currentPage<this.totalPage){
+            for(int i = (this.currentPage-1)*this.pageSize;i<this.currentPage*this.pageSize;i++){
+                currentPageList.add(list.get(i));
+            }
+        }else{
+            for(int i = (this.currentPage-1)*this.pageSize;i<this.totalCount;i++){
+                currentPageList.add(list.get(i));
+            }
+        }
+        return currentPageList;
+    }
+
+    public void setCurrentPageList(List<T> currentPageList) {
+        this.currentPageList = currentPageList;
+    }
 }
