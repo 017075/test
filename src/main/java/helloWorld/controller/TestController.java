@@ -100,7 +100,7 @@ public class TestController {
 		return modelAndView;
 	}
 
-	@RequestMapping("/testPage")
+	@RequestMapping("/")
 	public  ModelAndView testPage(TestBean bean,Pagination page){
 		ModelAndView modelAndView = new ModelAndView("testPage");
 		List<TestBean> beans = testMapper.getTestUser();
