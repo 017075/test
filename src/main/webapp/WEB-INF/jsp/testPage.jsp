@@ -1,10 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<link rel="stylesheet" type="text/css" href="/static/jQueryHdPaging/paging.css">
-<script type="text/javascript" src="/static/common/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/static/jQueryHdPaging/paging.js"></script>
-<script type="text/javascript" src="/static/jQueryHdPaging/paging.min.js"></script>
-
+<%@include file="common.jsp"%>
 <form action="/testPage" method="POST" id="dataListForm" accept-charset="UTF-8" onsubmit="document.charset='UTF-8'">
     <h1 align="center">宇宙级大佬信息统计</h1>
     <div>
