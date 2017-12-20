@@ -1,6 +1,14 @@
-<link rel="stylesheet" type="text/css" href="/static/jQueryHdPaging/paging.css">
-<link rel="stylesheet" type="text/css" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
-<script type="text/javascript" src="/static/common/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/static/jQueryHdPaging/paging.js"></script>
-<script type="text/javascript" src="/static/jQueryHdPaging/paging.min.js"></script>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="common.jsp"%>
+
+
+
+<html>
+<head>欢迎登录
+    <script type="text/javascript" src="/static/common/js/zhizhuwang.js"></script>
+
+<body>
+hello
+</body>
+</html>
