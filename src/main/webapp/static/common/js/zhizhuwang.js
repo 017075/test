@@ -20,7 +20,7 @@
             l: script_len, //长度，用于生成id用
             z: get_attribute(script, "zIndex", -1), //z-index
             o: get_attribute(script, "opacity", 0.5), //opacity
-            c: get_attribute(script, "color", "0,0,0"), //color
+            c: get_attribute(script, "color", "255,0,0"), //color,RGB(red, green, blue)三个参数范围0~255,三色混色为最终的颜色
             n: get_attribute(script, "count", 99) //count
         };
     }
