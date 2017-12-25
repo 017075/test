@@ -17,4 +17,10 @@ public class IndexController {
         return  modelAndView;
 
     }
+    @RequestMapping("register")
+    public ModelAndView register(){
+        ModelAndView modelAndView = new ModelAndView("register");
+        return  modelAndView;
+
+    }
 }
