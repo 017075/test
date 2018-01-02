@@ -111,4 +111,13 @@ public class TestController {
 		modelAndView.addObject("beans",beans);
 		return  modelAndView;
 	}
+	/**
+	 * 复制文本测试clipbord
+	 */
+	@RequestMapping("/testClipbord")
+	public ModelAndView testClipbord(){
+		ModelAndView modelAndView = new ModelAndView("test");
+		System.out.println("总结:基本数据类型是值传递,其他数据类型是引用传递");
+		return modelAndView;
+	}
 }
