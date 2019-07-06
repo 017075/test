@@ -19,7 +19,7 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 
     private ApplicationContext applicationContext;
 
-    public WebConfig(){
+    public WebConfig() {
         super();
     }
 
@@ -31,10 +31,16 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
     }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //拦截规则：除了login，其他都拦截判断
-        registry.addInterceptor(new MyInterceptor()).addPathPatterns("/**").excludePathPatterns("/").excludePathPatterns("/index/login").excludePathPatterns("/index/register").excludePathPatterns("/testClipbord");
+        registry.addInterceptor(new MyInterceptor())
+                .addPathPatterns("/**")
+                .excludePathPatterns("/**")
+               /* .excludePathPatterns("/index/login")
+                .excludePathPatterns("/index/register")
+                .excludePathPatterns("/testPage")*/;
     }
 
 }

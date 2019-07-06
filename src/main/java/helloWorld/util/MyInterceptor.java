@@ -23,10 +23,9 @@ public class MyInterceptor implements HandlerInterceptor {
         //判断用户ID是否存在，不存在就跳转到登录界面
         if(session.getAttribute("userId") == null){
             logger.info("------:跳转到login页面！");
-            response.sendRedirect("/");
+            response.sendRedirect("/index/login");
             return false;
         }else{
-            session.setAttribute("userId", session.getAttribute("userId"));
             return true;
         }
     }

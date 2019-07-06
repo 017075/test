@@ -16,7 +16,7 @@
         <div class="login_pop">
             <div class="login_pop_inner login_withpc">
                 <div align="center"><h2>欢迎登陆</h2></div>
-                <form class="login_form" method="post" name="login_form" action="/">
+                <form class="login_form" method="post" name="login_form" action="/testPage">
                     <!-- +.warn +.focus +.hide -->
                     <div class="login_form_row account"><label class="login_form_label"><i class="login_form_icon"></i>
                         <div class="login_form_inp"><input class="login_form_inp_input" type="text" id="username" name="username" placeholder="用户名"
