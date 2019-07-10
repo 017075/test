@@ -1,9 +1,17 @@
 package helloWorld.bean;
 
 public class TestBean {
+	private Integer id;
 	private String name;
 	private Integer age;
 	private Integer sex;
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

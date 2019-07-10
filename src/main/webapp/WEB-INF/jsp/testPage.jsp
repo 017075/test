@@ -7,9 +7,10 @@
         <table class="gridtable" width="100%">
             <thead>
             <tr>
-                <th style="width: 33%">大佬姓名</th>
-                <th style="width: 33%">大佬年龄</th>
-                <th style="width: 33%">大佬性别</th>
+                <th style="width: 24%">大佬姓名</th>
+                <th style="width: 24%">大佬年龄</th>
+                <th style="width: 24%">大佬性别</th>
+                <th style="width: 25%">数据操作</th>
             </tr>
             </thead>
             <tbody>
@@ -17,7 +18,8 @@
                 <tr>
                     <td>${bean.name}</td>
                     <td>${bean.age}</td>
-                    <td>${bean.sex==1?'man':'women'}</td>
+                    <td>${bean.sex==1?'男':'女'}</td>
+                    <td><a href="add.jsp">添加</a>&nbsp;&nbsp;<a href="delete?id=${bean.id}" onclick="return confirm('确定要删除吗?')">删除</a>&nbsp;&nbsp;<a href="update?id=${bean.id}">更新</a></td>
                 </tr>
             </c:forEach>
             </tbody>

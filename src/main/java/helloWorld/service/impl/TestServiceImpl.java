@@ -1,7 +1,6 @@
 package helloWorld.service.impl;
 
 import java.util.List;
-import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +28,32 @@ public class TestServiceImpl implements TestService {
 		bean2.setName("事务测试2");
 		bean2.setAge(18);
 		bean2.setSex(1);
+		
 		testMapper.insetTestUser(bean1);
 		testMapper.insetTestUser(bean2);
 		return testMapper.getTestUser();
+	}
+
+	@Override
+	public TestBean getTestUserById(int id) {
+	
+		return testMapper.getTestUserById(id);
+	}
+
+	@Override
+	public void insetTestUser(TestBean bean1) {
+		testMapper.insetTestUser(bean1);
+		
+	}
+
+	@Override
+	public boolean updateTestUser(TestBean bean) {
+		return testMapper.updateTestUser(bean);
+	}
+
+	@Override
+	public boolean deleteTestUser(int id) {
+		return testMapper.deleteTestUser(id);
 	}
 
 }

@@ -4,12 +4,15 @@ import helloWorld.bean.TestBean;
 
 import java.util.List;
 
-import org.mybatis.spring.annotation.MapperScan;
-
 public interface TestMapper {
 
 	List<TestBean> getTestUser();
+	
+	TestBean getTestUserById(int id);
 
 	void insetTestUser(TestBean bean1);
+	
+	boolean updateTestUser(TestBean bean);
 
+	boolean deleteTestUser(int id);
 }

@@ -1,7 +1,6 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <settings> 
-<localRepository>C:\Users\MC\.m2\repository</localRepository><!--ÐèÒª¸Ä³É×Ô¼ºµÄmavenµÄ±¾µØ²Ö¿âµØÖ·-->
+<localRepository>C:\Users\MC\.m2\repository</localRepository><!--ï¿½ï¿½Òªï¿½Ä³ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½mavenï¿½Ä±ï¿½ï¿½Ø²Ö¿ï¿½ï¿½Ö·-->
     <mirrors>
         <mirror>
             <id>alimaven</id>
