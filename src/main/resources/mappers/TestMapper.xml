@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="helloWorld.mapper.TestMapper">
-	<select id="getTestUser" resultType="helloWorld.bean.TestBean">select * from test_user
+    <select id="getTestUser" resultType="helloWorld.bean.TestBean">
+		select * from test_user
 	</select>
-	<select id="getTestBeanById" parameterType="int"
-		resultType="
-        helloWorld.bean.TestBean">select * from test_user where id=#{id}</select>
-	<insert id="insetTestUser"
-		parameterType="
-        helloWorld.bean.TestBean">insert into test_user (name , age , sex)
+    <select id="getTestUserById" parameterType="int" resultType="helloWorld.bean.TestBean">
+select * from test_user where id=#{id}
+</select>
+    <insert id="insetTestUser" parameterType="helloWorld.bean.TestBean">
+insert into test_user (name , age , sex)
 		values(#{name},#{age},#{sex})</insert>
 
-	<update id="updateTestUser"
-		parameterType="
-        helloWorld.bean.TestBean">update test_user set name=#{name},age=#{age},sex=#{sex}
-		where id=#{id}</update>
-	<delete id="deleteTestUser" parameterType="int"> delete from test_user
-		where id=#{id}</delete>
+    <update id="updateTestUser" parameterType="helloWorld.bean.TestBean">
+update test_user set name=#{name},age=#{age},sex=#{sex}
+		where id=#{id}
+		</update>
+    <delete id="deleteTestUser" parameterType="int">
+ delete from test_user
+		where id=#{id}
+		</delete>
 
 </mapper>

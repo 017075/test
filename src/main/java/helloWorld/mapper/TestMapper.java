@@ -3,7 +3,6 @@ package helloWorld.mapper;
 import helloWorld.bean.TestBean;
 
 import java.util.List;
-
 public interface TestMapper {
 
 	List<TestBean> getTestUser();
