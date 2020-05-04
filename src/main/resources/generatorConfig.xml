@@ -38,8 +38,23 @@
         </javaClientGenerator>
 
         <!--对应数据库表名 -->
-            <table tableName="user" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+            <table tableName="search_alias" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                    enableSelectByExample="false" selectByExampleQueryId="false" >
             </table>
+        <table tableName="search_searchfrom" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table tableName="search_alias_contact_index" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table tableName="search_index" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table tableName="search_dbcolumn_contact_searchfrom" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table tableName="search_searchfrom_contact_alias" schema="" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
     </context>
 </generatorConfiguration>
